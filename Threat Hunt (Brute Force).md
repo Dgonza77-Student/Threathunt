@@ -59,15 +59,6 @@ DeviceLogonEvents
 | summarize FailedAttempts = count() by RemoteIP, DeviceName
 | order by FailedAttempts desc
 ```
-## Related Queries:
-```kql
-// Broad view: failed network logons across the environment
-DeviceLogonEvents
-| where ActionType == "LogonFailed"
-| where LogonType == "Network"
-| summarize FailedAttempts = count() by RemoteIP, DeviceName
-| order by FailedAttempts desc
-```
 ![image](https://github.com/user-attachments/assets/34f2949b-fe07-45eb-9985-f2ec75f7853a)
 
 ```
@@ -87,6 +78,9 @@ DeviceLogonEvents
 | where ActionType == "LogonSuccess"
 ![image](https://github.com/user-attachments/assets/359c0726-c88b-41e9-bec7-6d6c98490224)
 ```
+
+![image](https://github.com/user-attachments/assets/11abd0e6-c666-4f0d-bb1c-2c090148497f)
+
 ---
 
 ## Created By:
