@@ -58,7 +58,7 @@ DeviceLogonEvents
 | where LogonType == "Network"
 | summarize FailedAttempts = count() by RemoteIP, DeviceName
 | order by FailedAttempts desc
-
+```
 ## Related Queries:
 ```kql
 // Broad view: failed network logons across the environment
@@ -86,7 +86,7 @@ DeviceLogonEvents
 | where DeviceName == "sd-edr-lab"
 | where ActionType == "LogonSuccess"
 ![image](https://github.com/user-attachments/assets/359c0726-c88b-41e9-bec7-6d6c98490224)
-
+```
 ---
 
 ## Created By:
